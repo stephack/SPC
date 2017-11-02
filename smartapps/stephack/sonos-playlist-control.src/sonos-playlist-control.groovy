@@ -26,9 +26,9 @@ definition(
     description: "Autoplay Stations/Playlists on Sonos speakers",
     category: "My Apps",
     //parent: "stephack:Sonos PlayList Control",
-    iconUrl: "https://cdn.rawgit.com/stephack/sonosVC/master/resources/images/sonosVC.png",
-    iconX2Url: "https://cdn.rawgit.com/stephack/sonosVC/master/resources/images/sonosVC.png",
-    iconX3Url: "https://cdn.rawgit.com/stephack/sonosVC/master/resources/images/sonosVC.png"
+    iconUrl: "https://cdn.rawgit.com/stephack/SPC/master/resources/images/spc.png",
+    iconX2Url: "https://cdn.rawgit.com/stephack/SPC/master/resources/images/spc.png",
+    iconX3Url: "https://cdn.rawgit.com/stephack/SPC/master/resources/images/spc.png"
 )
 
 preferences {
@@ -57,7 +57,7 @@ def parentPage() {
        		href (name: "aboutPage", 
        		title: "Sonos PlayList Control\nver "+version(), 
        		description: "Tap for User's Guide and Info.",
-       		image: "https://cdn.rawgit.com/stephack/sonosVC/master/resources/images/sonosVC.png",
+       		image: "https://cdn.rawgit.com/stephack/SPC/master/resources/images/spc.png",
        		required: false,
        		page: "aboutPage"
  	   		)
@@ -75,7 +75,7 @@ def mainPage(){
         
         if(sonos){
         	section{
-            	input "commTotal", "number", title: "# of VPL's to create", description:"Enter number: (1-5)", multiple: false, submitOnChange: true, required: true, image: "https://cdn.rawgit.com/stephack/sonosVC/master/resources/images/pl.png", range: "1..5"
+            	input "commTotal", "number", title: "# of VPL's to create", description:"Enter number: (1-5)", multiple: false, submitOnChange: true, required: true, image: "https://cdn.rawgit.com/stephack/SPC/master/resources/images/spc6cog.png", range: "1..5"
         	}        
         	if(commTotal && commTotal>=1 && commTotal<=5){
         		for(i in 1..commTotal) {
